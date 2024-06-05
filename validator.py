@@ -73,7 +73,8 @@ bt.logging.info(f"Loaded configuration: {config}")
 
 # Check the user specified device.
 if config.device == 'cpu':
-    raise ValueError("CPU is not supported for this task. You must have a GPU with at least " + str(MAX_MODEL_SIZE / 1e9) + " GB of RAM.")
+    raise ValueError("CPU validation is not supported. You must have a GPU with at least " + str(MAX_MODEL_SIZE / 1e9) + " GB of RAM.")
+
 # GPUs must have at least 40GB of RAM to fit the MAX_MODEL_SIZE.
 if 'cuda' in config.device:
     if not torch.cuda.is_available():
