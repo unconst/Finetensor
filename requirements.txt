@@ -1,0 +1,11 @@
+torch==2.2.0
+aiohttp==3.9.0b0
+bittensor==6.9.3
+tqdm==4.66.1
+beautifulsoup4==4.12.2
+openai==1.31.0
+typing-extensions==4.9.0
+huggingface-hub==0.23.3 
+tokenizers==0.19.1 
+transformers==4.41.2
+
