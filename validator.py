@@ -57,7 +57,7 @@ def load_validator_config() -> argparse.Namespace:
 
     # Add command line arguments with their types and default values
     parser.add_argument('--netuid', type=int, default=9, help="Network UID")
-    parser.add_argument('--device', type=str, default= 'cuda:1' if torch.cuda.is_available() else 'cpu', help="Device to run the model on")
+    parser.add_argument('--device', type=str, default= 'cuda' if torch.cuda.is_available() else 'cpu', help="Device to run the model on")
     bt.subtensor.add_args(parser)
     bt.logging.add_args(parser)
     bt.wallet.add_args(parser)
